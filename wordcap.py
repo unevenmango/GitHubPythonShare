@@ -38,7 +38,9 @@ words = args
 cap = 0
 out=""
 for i in words:
-    if (i == " "): continue
+    if (i == " "): 
+        out = out + i
+        continue
     if (cap):
         out = out + i.upper()
         cap = 0
