@@ -1,4 +1,5 @@
 #capitalize every other word
+#apt-get insall python-html5lib
 import sys
 import requests
 import random
@@ -7,7 +8,7 @@ from bs4 import BeautifulSoup
 
 
 
-args = sys.argv[1:]
+args = input("Type Sentence :: ")
 
 if len(args) == 0: 
     r=requests.get("https://www.reddit.com/r/randomstories/")
@@ -33,7 +34,7 @@ if len(args) == 0:
     print(out[num])
     exit("\nstoryEND")
 
-words = " ".join(args)
+words = args
 cap = 0
 out=""
 for i in words:
